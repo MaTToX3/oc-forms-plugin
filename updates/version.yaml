@@ -1,0 +1,35 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table novelus_forms_forms'
+    - builder_table_create_novelus_forms_forms.php
+1.0.3:
+    - 'Created table novelus_forms_fields'
+    - builder_table_create_novelus_forms_fields.php
+1.0.4:
+    - 'Updated table novelus_forms_fields'
+    - builder_table_update_novelus_forms_fields.php
+1.0.5:
+    - 'Updated table novelus_forms_fields'
+    - builder_table_update_novelus_forms_fields_2.php
+1.0.6:
+    - 'Created table novelus_forms_submissions'
+    - builder_table_create_novelus_forms_submissions.php
+1.0.7:
+    - 'Updated table novelus_forms_fields'
+    - builder_table_update_novelus_forms_fields_3.php
+1.0.8:
+    - 'Updated table novelus_forms_fields'
+    - builder_table_update_novelus_forms_fields_4.php
+1.0.9:
+    - 'Updated table novelus_forms_fields'
+    - builder_table_update_novelus_forms_fields_5.php
+1.0.10:
+    - 'Updated table novelus_forms_forms'
+    - builder_table_update_novelus_forms_forms.php
+1.0.11:
+    - 'Updated table novelus_forms_forms'
+    - builder_table_update_novelus_forms_forms_2.php
+1.0.12:
+    - 'Updated table novelus_forms_forms'
+    - builder_table_update_novelus_forms_forms_3.php

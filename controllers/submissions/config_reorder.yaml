@@ -1,0 +1,4 @@
+title: Submissions
+modelClass: Novelus\Forms\Models\Submission
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,10 @@
+tabs:
+    fields:
+        recaptcha_site_key:
+            label: 'Site key'
+            span: left
+            tab: Recaptcha
+        recaptcha_secret_key:
+            label: 'Secret key'
+            span: right
+            tab: Recaptcha

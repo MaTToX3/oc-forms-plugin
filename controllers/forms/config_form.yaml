@@ -1,0 +1,10 @@
+name: Forms
+form: $/novelus/forms/models/form/fields.yaml
+modelClass: Novelus\Forms\Models\Form
+defaultRedirect: novelus/forms/forms
+create:
+    redirect: 'novelus/forms/forms/update/:id'
+    redirectClose: novelus/forms/forms
+update:
+    redirect: novelus/forms/forms
+    redirectClose: novelus/forms/forms

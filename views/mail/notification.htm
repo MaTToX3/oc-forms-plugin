@@ -1,0 +1,15 @@
+subject = 'New form submission'
+==
+==
+<h2>Record #{{ id }}</h2>
+
+<table class="record-table m-t-md">
+    {% for key,val in value %}
+    <tr>
+        <td class="record-label">{{ key }}:</td>
+        <td class="record-value">
+            {{ val }}
+        </td>
+    </tr>
+    {% endfor %}
+</table>

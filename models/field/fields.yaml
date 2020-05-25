@@ -1,0 +1,59 @@
+tabs:
+    fields:
+        label:
+            label: Label
+            span: auto
+            required: 1
+            type: text
+            tab: Basic
+        type:
+            label: 'Select Type'
+            options:
+                text: text
+                email: email
+                number: number
+                textarea: textarea
+                select: select
+            showSearch: true
+            span: auto
+            default: text
+            required: 1
+            type: dropdown
+            tab: Basic
+        name:
+            label: 'Field name'
+            span: auto
+            required: 1
+            preset:
+                field: label
+                type: slug
+            type: text
+            tab: Basic
+        order:
+            label: Order
+            span: auto
+            type: number
+            tab: Basic
+        is_required:
+            label: 'Is required'
+            span: left
+            type: checkbox
+            comment: 'Check the box if the field must be required'
+            tab: Basic
+        select_data:
+            label: Data
+            span: left
+            type: datatable
+            tab: Basic
+            comment: 'Enter the key-value pairs for available options in select'
+            columns:
+                value:
+                    type: string
+                    title: Value
+                label:
+                    type: string
+                    title: Label
+            trigger:
+                action: show
+                field: type
+                condition: 'value[select]'

@@ -1,0 +1,14 @@
+<?= $this->makePartial('view_toolbar') ?>
+
+<h2>Record #<?php echo $submission->id ?></h2>
+
+<table class="record-table m-t-md">
+    <?php foreach($submission->value as $label => $value): ?>
+    <tr>
+        <td class="record-label"><?php echo ucwords($label) ?>:</td>
+        <td class="record-value">
+            <?php echo nl2br(htmlspecialchars($value, ENT_QUOTES)); ?>
+        </td>
+    </tr>
+    <?php endforeach ?>
+</table>

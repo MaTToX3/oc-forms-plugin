@@ -1,0 +1,4 @@
+title: Forms
+modelClass: Novelus\Forms\Models\Form
+toolbar:
+    buttons: reorder_toolbar

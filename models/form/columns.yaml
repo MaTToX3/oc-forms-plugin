@@ -1,0 +1,11 @@
+columns:
+    id:
+        label: 'ID'
+        type: text
+        searchable: true
+        sortable: true
+    name:
+        label: 'novelus.forms::lang.plugin.name'
+        type: text
+        searchable: true
+        sortable: true

@@ -1,0 +1,41 @@
+fields:
+    name:
+        label: 'Form Name'
+        span: full
+        placeholder: 'Enter the name of the form'
+        required: 1
+        type: text
+    has_recaptcha:
+        label: Recaptcha
+        span: left
+        default: 1
+        type: checkbox
+        comment: 'Check this if you want to display recaptcha on form'
+    has_email_notifications_enabled:
+        label: 'Send notification to email'
+        span: right
+        type: checkbox
+        comment: 'Check this if you want to send email notification on every submission'
+    send_notification_to:
+        label: 'Send notification to'
+        span: left
+        type: datatable
+        comment: 'Enter the email addresses you want to send notifications to'
+        columns:
+            email:
+                type: string
+                title: Email
+            name:
+                type: string
+                title: Name
+        trigger:
+            action: show
+            field: has_email_notifications_enabled
+            condition: checked
+
+tabs:
+    fields:
+        fields:
+            tab: Fields
+            type: partial
+            path: $/novelus/forms/controllers/forms/_relation_fields.htm

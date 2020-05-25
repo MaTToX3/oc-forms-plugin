@@ -1,0 +1,16 @@
+list: $/novelus/forms/models/submission/columns.yaml
+modelClass: Novelus\Forms\Models\Submission
+title: Submissions
+recordUrl: novelus/forms/submissions/view/:id
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+
+defaultSort:
+    column: created_at
+    direction: desc
