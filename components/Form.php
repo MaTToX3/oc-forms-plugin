@@ -120,6 +120,8 @@ class Form extends ComponentBase
 
     public function onRun()
     {
+        $this->addJs('/plugins/novelus/forms/assets/js/novelus-forms.js');
+
         $formId = $this->property('formId');
         $form = $this->form = FormModel::with('fields')->findOrFail($formId);
 

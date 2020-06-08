@@ -1,41 +1,34 @@
 <form id="novelus-form" data-request="{{ __SELF__ }}::onNovelusFormSubmit" data-request-validate data-request-flash
-      data-request-success="onSuccess()">
+  data-request-success="onSuccess()">
 
-    {% for field in __SELF__.fields %}
-    <div class="form-group">
-        <label for="">{{ field.label }}</label>
-        {% if field.type == 'select' %}
-        <select name="{{ field.name }}" id="" class="form-control">
-            {% for item in field.select_data %}
-            <option value="{{ item.value }}">{{ item.text }}</option>
-            {% endfor %}
-        </select>
-        {% elseif field.type == 'textarea' %}
-        <textarea name="{{ field.name }}" id="" rows="3" class="form-control" required="{% if field.is_required %} required {% endif %}"></textarea>
-        {% else %}
-        <input type="{{ field.type }}" name="{{ field.name }}" class="form-control" required="{% if field.is_required %} required {% endif %}">
-        {% endif %}
-        <span data-validate-for="{{ field.name }}"></span>
-    </div>
-    {% endfor %}
-
-    {% if __SELF__.form.has_recaptcha %}
-    <div class="g-recaptcha" data-sitekey="{{ __SELF__.siteKey }}"></div>
-
+  {% for field in __SELF__.fields %}
+  <div class="form-group">
+    <label for="">{{ field.label }}</label>
+    {% if field.type == 'select' %}
+    <select name="{{ field.name }}" id="" class="form-control">
+      {% for item in field.select_data %}
+      <option value="{{ item.value }}">{{ item.text }}</option>
+      {% endfor %}
+    </select>
+    {% elseif field.type == 'textarea' %}
+    <textarea name="{{ field.name }}" id="" rows="3" class="form-control" required="{% if field.is_required %} required {% endif %}"></textarea>
+    {% else %}
+    <input type="{{ field.type }}" name="{{ field.name }}" class="form-control" required="{% if field.is_required %} required {% endif %}">
     {% endif %}
+    <span data-validate-for="{{ field.name }}"></span>
+  </div>
+  {% endfor %}
 
-    <div class="alert alert-danger" data-validate-error>
-        <p data-message></p>
-    </div>
+  {% if __SELF__.form.has_recaptcha %}
+  <div class="g-recaptcha" data-sitekey="{{ __SELF__.siteKey }}"></div>
 
-    <input type="hidden" name="form" value="{{ __SELF__.form.id }}">
+  {% endif %}
 
-    <button class="btn btn-primary" data-attach-loading>{{ 'Submit' | _ }}</button>
+  <div class="alert alert-danger" data-validate-error>
+    <p data-message></p>
+  </div>
+
+  <input type="hidden" name="form" value="{{ __SELF__.form.id }}">
+
+  <button class="btn btn-primary" data-attach-loading>{{ 'Submit' | _ }}</button>
 </form>
-
-<script>
-    function onSuccess() {
-        document.getElementById("novelus-form").reset();
-        grecaptcha.reset();
-    }
-</script>
