@@ -7,3 +7,7 @@ TODO: List features
 TODO: List supported field types
 
 TODO: Add backend image
+
+TODO: Create composer package
+
+TODO: Publish on octoberCMS plugin repo
